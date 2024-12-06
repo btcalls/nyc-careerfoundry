@@ -1,55 +1,75 @@
-# Title
+# Data Analytics for Beginners
 
-[Dataset](#) | [Dashboard](#) | [Notebook](#)
+[Dataset](/nyc_bikes.xlsx) | [Dashboard](#) | [Notebook](/nyc_bikes.xlsx)
 
-**Tools**: _Python_, _SQL_, _Tableau_, *(add as needed)*
+**Tools**: _Python_, _SQL_, _Tableau_, _Git_
 
 ---
 
 ## Overview  
-Provide the project’s purpose, objectives, and the problem it aims to solve.  
-- **Making Predictions**: Forecasting future outcomes based on past data.  
-- **Categorising Things**: Grouping data points based on similarities.  
-- **Detecting Something Unusual**: Identifying anomalies or outliers in data.  
-- **Identifying Themes**: Discovering common topics or subjects within data.  
-- **Discovering Connections**: Finding relationships between different data points.  
-- **Finding Patterns**: Uncovering recurring trends or behaviours in data.  
+This data analysis project is based on the [CareerFoundry](https://careerfoundry.com/en/tutorials/data-analytics-for-beginners/introduction-to-data-analytics) tutorial that serves as a starting point for aspiring data analysts such as myself.
+
+As with the tutorial this is based from, the project will be focusing on the NY Citi Bikes dataset, aiming to uncover key insights about the usage of Citi bikes across NY. In particular, key [investigative questions](#investigative-questions) were already identified for us to aid with the data analysis.
+
+As such, the dataset provides a perfect opportunity for data analytics tasks such as exploratory data analysis (EDA), data cleaning, and visualisations.
 
 ### Metrics  
 *(List relevant metrics here)*  
 
 ### Stakeholders  
-*(List stakeholders here)*  
+This project is mainly aimed towards NY Citi Bike stakeholders. The objective is to understand the current usage of the City Bikes service, which in turn, should aid the stakeholders into making more impactful business decisions, whether it be a more focused marketing campaigns, or additional bikes on busier locations.
 
 ### Investigative Questions  
-**SMART Framework**:  
-- **Specific**: Clearly define the issue.  
-- **Measurable**: Quantify the problem or goal.  
-- **Action-oriented**: Focus on steps to resolve the issue.  
-- **Relevant**: Relate to the project’s overall objectives.  
-- **Time-bound**: Set a timeline for achieving the goal.  
+The following questions were already defined for us to aid in our data analysis:
+- What are the most popular pick-up locations across the city for NY Citi Bike rental?
+- How does the average trip duration vary across different age groups?
+- Which age group rents the most bikes?
+- How does bike rental vary across the two user groups (one-time users vs long-term subscribers) on different days of the week?
+- Does user age impact the average bike trip duration?
 
-**Avoid:**  
-- Leading questions (biasing the respondent’s answer).  
-- Closed questions (limit to yes/no answers).  
-- Vague questions (unclear objectives).  
-
+In addition to the pre-defined questions, supplemental insights can be derived by answering the following:
+- What are the most popular drop-off locations?
+- What route (pick-up to drop-off) are the most popular?
+- At which time of day is the busiest?
+- Which months are the busiest in terms of no. of trips?
+- Which seasons see the most no. of rentals?
 ---
 
 ## Methods  
 
 ### Data Collection and Preparation  
-Detail the steps involved:  
-1. Data collection  
-2. Data cleaning  
-3. *(Additional steps if applicable)*  
+#### Data Collection  
+In contrast as to how the tutorial did its data cleaning process, I chose to collect and clean the dataset using Python and SQL. This is all to hone my existing knowledge and practice with said tools. To summarise the collection process:
+
+1. Downloaded the dataset to local storage.
+2. Created a [Python Notebook](/NYC.ipynb) and loaded the Excel file.
+3. Use pandas to perform EDA.
+
+#### Data cleaning  
+Pandas was utilised for the data cleaning process. To ensure that when the dataset is migrated into MySQL, it is in its most favorable state for data analysis. The steps performed were:
+
+1. Remove outliers based on EDA.
+2. Manipulate dataset by normalising it to its dataframes to correspond as SQL tables later on. 
+3. Further manipulation such as renaming columns and removing unnecessary ones.
+4. Dropped duplicates for each newly created dataframes.
+5. Each dataframe are then injected to MySQL; tables were created and populated with the same data.
 
 ### Analysis  
 Include visuals such as charts, graphs, or screenshots.  
 
+
 ---
 
-## Results  
+## Results 
+| Key Question                                                                                                                  | Answer or Insights | Action Points |
+|-------------------------------------------------------------------------------------------------------------------------------|--------------------|---------------|
+| What are the most popular pick-up locations across the city for NY Citi Bike rental?                                          |                    |               |
+| How does the average trip duration vary across different age groups?                                                          |                    |               |
+| Which age group rents the most bikes?                                                                                         |                    |               |
+| How does bike rental vary across the two user groups (one-time users vs long-term subscribers) on different days of the week? |                    |               |
+| Does user age impact the average bike trip duration?                                                                          |                    |               |
+
+
 Clearly outline the final outcomes and insights.  
 - **Key findings**: *(Summarize findings)*  
 - **Next steps**: *(Future recommendations or improvements)*  
